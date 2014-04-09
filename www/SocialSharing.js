@@ -36,12 +36,12 @@ SocialSharing.prototype.shareVia = function (via, message, subject, image, url, 
 };
 
 SocialSharing.install = function () {
-  if (!window.plugins) {
-    window.plugins = {};
+  if (!cordova.plugins) {
+    cordova.plugins = {};
   }
 
-  window.plugins.socialsharing = new SocialSharing();
-  return window.plugins.socialsharing;
+  cordova.plugins.socialsharing = new SocialSharing();
+  return cordova.plugins.socialsharing;
 };
 
 cordova.addConstructor(SocialSharing.install);
